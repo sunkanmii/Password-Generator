@@ -1,0 +1,22 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+.passwordButton{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.passwordButton h2{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+#genPass{
+    display: block;
+    margin: auto;
+}
