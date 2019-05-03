@@ -18,6 +18,10 @@ function genRandAlphabets(noLetters) {
     return newAlpha;
 }
 
+let myAlpha = [];
+myAlpha = genRandAlphabets(4);
+console.log(myAlpha);
+
 function genRandNumbers(num) {
     let all_nums = "1234567890";
     let nums = [];
