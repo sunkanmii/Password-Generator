@@ -9,7 +9,22 @@
 <body>    
     <div class="passwordButton">
         <h2>Password Generator</h2>
-        <button id="genPass">Generate Password</button>
+        
+        <form>
+            <input id="passwordField" type="text" readonly>
+            <br><br>
+            
+            <label>Length: </label>
+            <input id="lengthPicked" type="number" min="8" max="15" value="8">
+            <br><br>
+            
+            <input id="symbolChecked"type="checkbox"><label>Symbols</label>
+        </form>
+        
+        <div id="buttonDes">
+            <button id="genPass">Generate Password</button>
+        </div>
     </div>
+
 </body>
 </html>
