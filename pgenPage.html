@@ -11,7 +11,7 @@
         <h2>Password Generator</h2>
         
         <form>
-            <input id="passwordField" type="text" readonly>
+            <input id="passwordField" type="text">
             <br><br>
             
             <label>Length: </label>
@@ -22,9 +22,10 @@
         </form>
         
         <div id="buttonDes">
-            <button id="genPass">Generate Password</button>
+            <button id="genPass" onclick=genPassword()>Generate Password</button>
         </div>
     </div>
+
     <script type="text/javascript" src="pgen.js" ></script>
 </body>
 </html>

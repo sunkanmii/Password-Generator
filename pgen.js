@@ -2,16 +2,18 @@ let password_field = document.getElementById("passwordField");
 let button_genPass = document.getElementById("genPass");
 let password_length = document.getElementById("lengthPicked");
 let symbol_checked = document.getElementById("symbolChecked");
+let noLength = document.getElementById('lengthPicked').value;
 
-button_genPass.addEventListener('click', genPassword());
+// button_genPass.addEventListener('click', genPassword());
 
-function genRandAlphabets(noLetters) {
+function genRandAlphabets() {
     let alphabets = "abcdefghijklmopqrstuvwxyz";
     let newAlpha = [];
     let randInd;
 
-    for(let i = 0; i < noLetters; i++){
-        randInd = 1 + Math.random() * noLetters;
+
+    for(let i = 0; i < noLength; i++){
+        randInd = 1 + Math.random() * noLength;
         newAlpha[i] = alphabets.charAt(randInd);
     }
 
@@ -19,7 +21,7 @@ function genRandAlphabets(noLetters) {
 }
 
 let myAlpha = [];
-myAlpha = genRandAlphabets(4);
+myAlpha = genRandAlphabets();
 console.log(myAlpha);
 
 function genRandNumbers(num) {
@@ -40,5 +42,7 @@ function genRandSymbols(){
 }
 
 function genPassword() {
-
+    password_field.value = "";
+     setInterval(function(){password_field.value = "STOP CLICKING";}, 2350);
+    
 }
