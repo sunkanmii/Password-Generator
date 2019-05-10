@@ -4,7 +4,9 @@ let password_length = document.getElementById("lengthPicked");
 let symbol_checked = document.getElementById("symbolChecked");
 let noLength = document.getElementById('lengthPicked').value;
 let sepEle = noLength / 2;
-var newAlphaNo;
+let newAlphaNo;
+let newNum;
+
 // button_genPass.addEventListener('click', genPassword());
 console.log(noLength);
 
@@ -16,7 +18,7 @@ function genRandAlphabets(alphaNo) {
     // let myRandInd;
     // let alphaNo = noLength / 2;
     newAlphaNo = 1 + Math.floor(Math.random() * alphaNo);
-     
+
 
     for(let i = 0; i < newAlphaNo; i++) {
         randInd = 1 + Math.floor(Math.random() * alphaLen);
@@ -45,9 +47,15 @@ function genRandNumbers(num) {
     let all_nums_len = all_nums.length;
     let nums = [];
     let randInd;
+    let subtrahend = num - 1;
 
-    for(let i = 0; i < num; i++) {
-        randInd = 1 + Math.floor(Math.random() * all_nums_len);
+    //How to create a random number between two numbers(the two numbers are 
+    //inclusive)
+
+    newNum = Math.floor(Math.random() * (num - subtrahend + 1)) + subtrahend; 
+    
+    for(let i = 0; i < newNum; i++) {
+        randInd = Math.floor(Math.random() * all_nums_len);
         nums[i] = all_nums.charAt(randInd);
     }
 
@@ -75,7 +83,7 @@ function genPassword(){
 
         let alphaNo1 =  - newAlphaNo;
         let myNum = [];
-        myNum = genRandNumbers();
-
+        myNum = genRandNumbers(sepEle - 1);
+        
     }
 }
