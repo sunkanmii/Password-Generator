@@ -15,7 +15,7 @@
             <br><br>
             
             <label>Length: </label>
-            <input id="lengthPicked" type="number" min="8" max="15" value="8">
+            <input id="lengthPicked" type="number" min="1" max="15" value="8">
             <br><br>
             
             <input type="checkbox" id="symbolChecked"><label>Symbols</label>
@@ -24,18 +24,17 @@
         <div id="buttonDes">
             <button id="genPass" onclick = genPassword()>Generate Password</button>
         </div>
-    
     </div>
 
-    <button onclick="">Options</button>
+    <button onclick="displayOptions()">Options</button>
 
-    <section class="Options-menu">
+    <section class="options-menu">
         <h2 id="options-tag">Options</h2>
         <ul class="user-selections">
             <li id ="no-symbols">Symbols(Number of symbols)</li>
             <li id = "no-letters">Letters(Number of letters)</li>
             <li id = "amount-nums">Number(Amount of numbers present)</li>
-            <li>Let the system decide for me</li>
+            <li id = "sys-decide">Let the system decide for me</li>
         </ul>
     </section>
     <script type="text/javascript" src="pgen.js" ></script>

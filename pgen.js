@@ -3,10 +3,15 @@ let button_genPass = document.getElementById("genPass");
 let password_length = document.getElementById("lengthPicked");
 let symbol_checked = document.getElementById("symbolChecked").checked;
 let noLength = document.getElementById('lengthPicked').value;
+let options_menu = document.getElementsByClassName('options-menu')[0]; 
+let noSym = document.getElementById('no-symbols');
+let noLetters = document.getElementById('no-letters');
+let nums = document.getElementById('amount-nums');
+let sysDec = document.getElementById('sys-decide');
 let sepEle = noLength / 2;
 let moreAlpha = sepEle + 2; 
 let newAlphaNo1, newNum, newNum1;
-  
+
 // button_genPass.addEventListener('click', genPassword());
 console.log(noLength);
 
@@ -168,3 +173,11 @@ function genPassword() {
         }
     }
 }
+
+function displayOptions(){
+    options_menu.style.display = 'inline-block';
+    noSym.style.animation = 'fade-in-left-1 150ms cubic-bezier(0, 0, 0.28, 0.96) 50ms 1 forwards';
+    noLetters.style.animation = 'fade-in-left-2 150ms cubic-bezier(0, 0, 0.28, 0.96) 80ms 1 forwards';
+    nums.style.animation = 'fade-in-left-3 150ms cubic-bezier(0, 0, 0.28, 0.96) 110ms 1 forwards';
+    sysDec.style.animation = 'fade-in-left-4 150ms cubic-bezier(0, 0, 0.28, 0.96) 140ms 1 forwards';
+}   
