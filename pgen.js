@@ -176,8 +176,8 @@ function genPassword() {
 
 function displayOptions(){
     options_menu.style.display = 'inline-block';
-    noSym.style.animation = 'fade-in-left-1 150ms cubic-bezier(0, 0, 0.28, 0.96) 50ms 1 forwards';
-    noLetters.style.animation = 'fade-in-left-2 150ms cubic-bezier(0, 0, 0.28, 0.96) 80ms 1 forwards';
-    nums.style.animation = 'fade-in-left-3 150ms cubic-bezier(0, 0, 0.28, 0.96) 110ms 1 forwards';
-    sysDec.style.animation = 'fade-in-left-4 150ms cubic-bezier(0, 0, 0.28, 0.96) 140ms 1 forwards';
+    noSym.style.animation = 'fade-in-left-1 220ms cubic-bezier(0, 0, 0.28, 0.96) 50ms 1 forwards';
+    noLetters.style.animation = 'fade-in-left-2 220ms cubic-bezier(0, 0, 0.28, 0.96) 80ms 1 forwards';
+    nums.style.animation = 'fade-in-left-3 220ms cubic-bezier(0, 0, 0.28, 0.96) 110ms 1 forwards';
+    sysDec.style.animation = 'fade-in-left-4 220ms cubic-bezier(0, 0, 0.28, 0.96) 140ms 1 forwards';
 }   
