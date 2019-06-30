@@ -34,18 +34,25 @@
 }
 .options-menu{
     display: none;
+    text-align: left;
     color: rgb(77, 68, 209);
-    position: relative;
-    animation: fade-in-left 0.3s cubic-bezier(0, 0, 0.28, 0.96) 50ms 1 forwards;
 }
 .options-menu #options-tag{
     color: rgb(54, 48, 134);
     animation: none;
-    font-size: 30px;
-    position: static;
+    height: auto;
+    font-weight: 100;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 25px;
 }
 .options-menu .user-selections{
-    list-style-type: none;
+    padding-left: 20px;
+}
+.options-menu .user-selections > div{
+    font-weight: 100;
+    margin-bottom: 7px;
+    font-size: 15.5px;
 }
 .options-menu .user-selections #no-symbols{
     position: relative;

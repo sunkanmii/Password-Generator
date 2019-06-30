@@ -8,6 +8,10 @@ let noSym = document.getElementById('no-symbols');
 let noLetters = document.getElementById('no-letters');
 let nums = document.getElementById('amount-nums');
 let sysDec = document.getElementById('sys-decide');
+let noSymbs = document.getElementById('no-sym-picked');
+let noLettP = document.getElementById('no-lett-picked');
+let noGen = document.getElementById('nums-to-gen');
+let sysDecision = document.getElementById('sys-dec'); 
 let sepEle = noLength / 2;
 let moreAlpha = sepEle + 2; 
 let newAlphaNo1, newNum, newNum1;
@@ -33,6 +37,7 @@ function genRandAlphabets(alphaNo) {
     if(symbol_checked == true){
         
         newAlphaNo = Math.floor(Math.random() * (alphaNo - subtrahend_check + 1)) + subtrahend_check;
+        
         for (let i = 0; i < newAlphaNo; i++) {
             randInd = Math.floor(Math.random() * (alphaLen - 0)) + 0;
             newAlpha[i] = alphabets.charAt(randInd);
@@ -120,56 +125,72 @@ function genRandSymbols(my_num) {
 }
 
 function genPassword() {
+
     symbol_checked = document.getElementById("symbolChecked").checked;
     noLength = document.getElementById('lengthPicked').value;
+    sysDecision.checked;
 
     password_field.value = "";
 
     console.log(symbol_checked);
     console.log(noLength);
 
-    if (symbol_checked == true) {
-        let myAlpha = [];
-        myAlpha = genRandAlphabets(sepEle);
+    if(sysDecision.checked == true){
+        noLettP.disabled = true;
+        noGen.disabled = true;
+        noSymbs.disabled = true;
 
-        let myNum = [];
-        myNum = genRandNumbers(sepEle - 1);
-        console.log(myNum);
+        if (symbol_checked == true) {
+            
+            let myAlpha = [];
+            myAlpha = genRandAlphabets(sepEle);
+       
+            noLettP.value = newAlphaNo;
+            
+            let myNum = [];
+            myNum = genRandNumbers(sepEle - 1);
+            noGen.value = newNum;
+            
+            let mySymb = [];
+            let symbLen = noLength - (newAlphaNo + newNum);
+            mySymb = genRandSymbols(symbLen);
+            noSymbs.value = symbLen;
+            
+            let my_password = myAlpha.concat(myNum, mySymb);
+            
+            console.log(my_password);
+            
+            for (let i = 0; i < my_password.length; i++) {
+                password_field.value += my_password[i];
+            }
+            
+        } else {
+            let myAlpha = [];
+            myAlpha = genRandAlphabets(moreAlpha);
+            noLettP.value = newAlphaNo;
 
-        let mySymb = [];
-        let symbLen = noLength - (newAlphaNo + newNum);
-        mySymb = genRandSymbols(symbLen);
-
-        console.log(mySymb);
-        let my_password = myAlpha.concat(myNum, mySymb);
-
-        console.log(my_password);
-
-        for (let i = 0; i < my_password.length; i++) {
-            password_field.value += my_password[i];
-        }
-
-    } else {
-        let myAlpha = [];
-        myAlpha = genRandAlphabets(moreAlpha);
-        console.log(myAlpha);
-
-        let myNum = [];
-
-        console.log(newAlphaNo);
-        newNum1 = noLength - newAlphaNo;
-        
-        console.log(newNum1);
-
-        myNum = genRandNumbers(newNum1);
-        console.log(myNum);
-
-        let my_password = myAlpha.concat(myNum);
-
-        console.log(my_password);
-
-        for (let i = 0; i < my_password.length; i++) {
-            password_field.value += my_password[i];
+            console.log(myAlpha);
+            
+            let myNum = [];
+            
+            console.log(newAlphaNo);
+            newNum1 = noLength - newAlphaNo;
+            
+            console.log(newNum1);
+            
+            noSymbs.value = "-";
+            myNum = genRandNumbers(newNum1);
+            noGen.value = newNum1;
+            
+            console.log(myNum);
+            
+            let my_password = myAlpha.concat(myNum);
+            
+            console.log(my_password);
+            
+            for (let i = 0; i < my_password.length; i++) {
+                password_field.value += my_password[i];
+            }
         }
     }
 }
@@ -181,3 +202,7 @@ function displayOptions(){
     nums.style.animation = 'fade-in-left-3 220ms cubic-bezier(0, 0, 0.28, 0.96) 110ms 1 forwards';
     sysDec.style.animation = 'fade-in-left-4 220ms cubic-bezier(0, 0, 0.28, 0.96) 140ms 1 forwards';
 }   
+
+
+//To-do
+//-Create another js file for user and import functions from here and use

@@ -21,22 +21,41 @@
             <input type="checkbox" id="symbolChecked"><label>Symbols</label>
         </form>
         
+            <button onclick="displayOptions()">Options</button>
+        
+            <section class="options-menu">
+        
+                <h2 id="options-tag">Options</h2>
+                <div class="user-selections">
+                    
+                    <div id ="no-symbols">
+                        <label>Symbols(Number of symbols)</label>
+                        <input id="no-sym-picked" type ="tel">
+                    </div>
+            
+                    <div id = "no-letters">
+                        <label>Letters(Number of letters)</label>
+                        <input id = "no-lett-picked" type ="tel">
+                    </div>
+            
+                    <div id = "amount-nums">
+                        <label>Number(Amount of numbers present)</label>
+                        <input id = "nums-to-gen" type ="tel">
+                    </div>
+        
+                    <div id = "sys-decide">
+                        <label>Let the system decide for me</label>
+                        <input id = "sys-dec" type="checkbox" checked = true>
+                    </div>
+                    
+                </div>
+            </section>
+        
         <div id="buttonDes">
             <button id="genPass" onclick = genPassword()>Generate Password</button>
         </div>
+
     </div>
-
-    <button onclick="displayOptions()">Options</button>
-
-    <section class="options-menu">
-        <h2 id="options-tag">Options</h2>
-        <ul class="user-selections">
-            <li id ="no-symbols">Symbols(Number of symbols)</li>
-            <li id = "no-letters">Letters(Number of letters)</li>
-            <li id = "amount-nums">Number(Amount of numbers present)</li>
-            <li id = "sys-decide">Let the system decide for me</li>
-        </ul>
-    </section>
-    <script type="text/javascript" src="pgen.js" ></script>
+    <script type="text/javascript" src="pgen-system.js" ></script>
 </body>
 </html>
