@@ -1,9 +1,9 @@
-*
-{
+* {
     margin: 0;
     box-sizing: border-box;
 }
-.passwordButton{
+
+.passwordButton {
     display: flex;
     flex-wrap: wrap;
     margin-top: 130px;
@@ -13,100 +13,181 @@
     height: 500px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.passwordButton h2{
+
+.passwordButton h2 {
     display: inline-block;
     text-align: center;
     width: 100%;
     height: 100px;
 }
-.passwordButton form{
-    display: inline-block;
-    width: 100%;
-    height: 100px;
-}
-#buttonDes{
-    display: inline-block;
-    width: 100%;
-    height: 100px;
-}
-#genPass{
 
+.passwordButton form {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
 }
-.options-menu{
+
+#buttonDes {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+}
+
+#genPass{
+    color: white;
+    font-size: 19.2px;
+    height: 40px;
+    width: 225px;
+    border: none;
+    border-radius: 40px;
+    font-weight: 300;
+    /* background-color: blue; */
+    background-color:  rgb(60, 60, 190);
+    animation: change-color 12s linear 10ms infinite;
+    cursor: pointer;
+}
+.passwordButton .button-class {
+    display: inline-block;
+    margin: 30px 0px 5px;
+    width: 100%;
+}
+
+.button-class #options-button{
+    cursor: pointer;
+}
+
+.options-menu {
     display: none;
     text-align: left;
-    color: rgb(77, 68, 209);
+    color: rgb(100, 100, 194);
 }
-.options-menu #options-tag{
-    color: rgb(54, 48, 134);
+
+.options-menu .options-menu-head {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.options-menu #options-tag {
+    color: rgb(60, 60, 190);
     animation: none;
     height: auto;
-    font-weight: 100;
-    margin-bottom: 20px;
+    display: inline-block;
+    width: 50%;
+    font-weight: 500;
     text-align: left;
     font-size: 25px;
 }
-.options-menu .user-selections{
+.options-menu .options-menu-head .close-button-cont {
+    display: inline-block;
+    text-align: right;
+    width: 50%;
+}
+.options-menu .options-menu-head #close-button {
+    height: 30px;
+    color: azure;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 70, 70);
+}
+
+.options-menu .user-selections {
     padding-left: 20px;
 }
-.options-menu .user-selections > div{
+
+.options-menu .user-selections > div {
     font-weight: 100;
     margin-bottom: 7px;
     font-size: 15.5px;
 }
-.options-menu .user-selections #no-symbols{
+
+.options-menu .user-selections #no-symbols {
     position: relative;
     opacity: 0;
     left: 40px;
 }
-.options-menu .user-selections #no-letters{
+
+.options-menu .user-selections #no-letters {
     opacity: 0;
     position: relative;
     left: 50x;
 }
-.options-menu .user-selections #amount-nums{
+
+.options-menu .user-selections #amount-nums {
     opacity: 0;
     position: relative;
     left: 60px;
 }
-.options-menu .user-selections #sys-decide{
+
+.options-menu .user-selections #sys-decide {
     opacity: 0;
     position: relative;
     left: 70px;
+    margin-bottom: 20px;
 }
-
-@keyframes fade-in-left-1{
+.options-menu .user-selections input{
+    transition: background-color 150ms ease-out 30ms;  
+}
+.options-menu .user-selections input[type="checkbox"]{
+    font-size: 50px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+@keyframes change-color{
     0%{
+        background-color:  rgb(60, 60, 190);
+    }
+    25%{
+        background-color: green;
+    }
+    50%{ 
+        background-color: goldenrod;
+    }
+    100%{
+        background-color:  rgb(60, 60, 190);
+    }
+}
+@keyframes fade-in-left-1 {
+    0% {
         left: 40px;
     }
-    100%{
+
+    100% {
         opacity: 1;
         left: 0px;
     }
 }
-@keyframes fade-in-left-2{
-    0%{
+
+@keyframes fade-in-left-2 {
+    0% {
         left: 50px;
     }
-    100%{
+
+    100% {
         opacity: 1;
         left: 0px;
     }
 }
-@keyframes fade-in-left-3{
-    0%{
+
+@keyframes fade-in-left-3 {
+    0% {
         left: 60px;
     }
-    100%{
+
+    100% {
         opacity: 1;
         left: 0px;
     }
 }
-@keyframes fade-in-left-4{
-    0%{
+
+@keyframes fade-in-left-4 {
+    0% {
         left: 70px;
     }
-    100%{
+
+    100% {
         opacity: 1;
         left: 0px;
     }

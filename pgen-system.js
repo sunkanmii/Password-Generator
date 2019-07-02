@@ -4,6 +4,8 @@ let password_length = document.getElementById("lengthPicked");
 let symbol_checked = document.getElementById("symbolChecked").checked;
 let noLength = document.getElementById('lengthPicked').value;
 let options_menu = document.getElementsByClassName('options-menu')[0];
+let options_button = document.getElementById('options-button');
+let close_button = document.getElementById('close-button');
 let noSym = document.getElementById('no-symbols');
 let noLetters = document.getElementById('no-letters');
 let nums1 = document.getElementById('amount-nums');
@@ -278,6 +280,8 @@ function saveButtonClick(){
 }
 function displayOptions() {
     options_menu.style.display = 'inline-block';
+    options_button.style.display = 'none';
+    close_button.style.display = 'inline-block';
     noSym.style.animation = 'fade-in-left-1 220ms cubic-bezier(0, 0, 0.28, 0.96) 50ms 1 forwards';
     noLetters.style.animation = 'fade-in-left-2 220ms cubic-bezier(0, 0, 0.28, 0.96) 80ms 1 forwards';
     nums1.style.animation = 'fade-in-left-3 220ms cubic-bezier(0, 0, 0.28, 0.96) 110ms 1 forwards';
@@ -285,6 +289,8 @@ function displayOptions() {
 }
 function closeOptions(){
     options_menu.style.display = 'none';
+    options_button.style.display = 'inline-block';
+    close_button.style.display = 'none';
 }
 
 

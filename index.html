@@ -11,7 +11,7 @@
         <h2>Password Generator</h2>
         
         <form>
-            <input id="passwordField" type="text">
+            <input id="passwordField" type="text" readonly>
             <br><br>
             
             <label>Length: </label>
@@ -20,13 +20,18 @@
             
             <input type="checkbox" id="symbolChecked"><label>Symbols</label>
         </form>
-        
-            <button onclick="displayOptions()">Options</button>
-        
-            <section class="options-menu">
-        
+
+        <div class="button-class">
+            <button id = "options-button" onclick="displayOptions()">Options</button>
+        </div>
+
+        <section class="options-menu">
+            <div class = "options-menu-head">
                 <h2 id="options-tag">Options</h2>
-                <button onclick="closeOptions()">close</button>
+                <div class="close-button-cont">
+                    <button title = "close" id = "close-button" onclick="closeOptions()">close</button>
+                </div>
+            </div>
                 <div class="user-selections">
                     
                     <div id ="no-symbols">
@@ -48,6 +53,7 @@
                         <label>Let the system decide for me</label>
                         <input id = "sys-dec" type="checkbox" checked = true onclick="checkAddress()">
                     </div>
+
                     <button id="save-button" onclick="saveButtonClick()" disabled = true>Save</button>
                 </div>
             </section>
