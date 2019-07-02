@@ -130,7 +130,7 @@
     border-radius: 40px;
     font-weight: 300;
     background-color:  rgb(60, 60, 190);
-    animation: change-color 12s linear 10ms infinite;
+    animation: change-color 11s linear 10ms infinite;
     cursor: pointer;
 }
 .user-selections #save-button{
