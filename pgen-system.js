@@ -4,6 +4,7 @@ let password_length = document.getElementById("lengthPicked");
 let symbol_checked = document.getElementById("symbolChecked").checked;
 let noLength = document.getElementById('lengthPicked').value;
 let options_menu = document.getElementsByClassName('options-menu')[0];
+let options_class = document.getElementsByClassName('button-class')[0];
 let options_button = document.getElementById('options-button');
 let close_button = document.getElementById('close-button');
 let noSym = document.getElementById('no-symbols');
@@ -280,6 +281,7 @@ function saveButtonClick(){
 }
 function displayOptions() {
     options_menu.style.display = 'inline-block';
+    options_class.style.margin = '30px 0px 5px';
     options_button.style.display = 'none';
     close_button.style.display = 'inline-block';
     noSym.style.animation = 'fade-in-left-1 220ms cubic-bezier(0, 0, 0.28, 0.96) 50ms 1 forwards';
