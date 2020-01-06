@@ -1,3 +1,17 @@
+"use strict";
+
+if("serviceWorker" in navigator){
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js")
+        .then(registration => {
+            console.log("Service worker is registered: ", registration);
+        })
+        .catch(err => {
+            console.error("Registration failed: ", err);
+        });
+    });
+}
+
 let password_field = document.getElementById("passwordField");
 let button_genPass = document.getElementById("genPass");
 let password_length = document.getElementById("lengthPicked");
@@ -156,7 +170,12 @@ function genRandSymbols(my_num) {
 }
 
 function genPassword() {
+    let test = document.querySelector("#test");
     
+    document.querySelector("#test").textContent = `<section>
+            <p>My name is sunkanmi</p>
+        </section>
+    `;
     symbol_checked = document.getElementById("symbolChecked").checked;
     noLength = document.getElementById('lengthPicked').value;
     sysDecision.checked;
@@ -294,7 +313,6 @@ function closeOptions(){
     options_button.style.display = 'inline-block';
     close_button.style.display = 'none';
 }
-
 
 //To-do
 //-Create another js file for user and import functions from here and use
