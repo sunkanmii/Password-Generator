@@ -1,5 +1,4 @@
 "use strict";
-
 if("serviceWorker" in navigator){
     window.addEventListener("load", () => {
         navigator.serviceWorker.register("sw.js")
@@ -11,7 +10,6 @@ if("serviceWorker" in navigator){
         });
     });
 }
-
 let password_field = document.getElementById("passwordField");
 let button_genPass = document.getElementById("genPass");
 let password_length = document.getElementById("lengthPicked");
@@ -34,7 +32,8 @@ let my_password, myAlpha, myNum, mySymb;
 let temp1 = 0, temp2;
 let sepEle = noLength / 2;
 let moreAlpha = sepEle + 2;
-let newAlphaNo1, newNum, newNum1;
+let newAlphaNo = 0, newAlphaNo1 = 0, newNum = 0, newNum1 = 0;
+let temp = 0;
 
 // button_genPass.addEventListener('click', genPassword());
 console.log(noLength);
@@ -170,12 +169,6 @@ function genRandSymbols(my_num) {
 }
 
 function genPassword() {
-    let test = document.querySelector("#test");
-    
-    document.querySelector("#test").textContent = `<section>
-            <p>My name is sunkanmi</p>
-        </section>
-    `;
     symbol_checked = document.getElementById("symbolChecked").checked;
     noLength = document.getElementById('lengthPicked').value;
     sysDecision.checked;
